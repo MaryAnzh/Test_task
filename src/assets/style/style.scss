@@ -1,0 +1,33 @@
+@import '../../view/components/form/from.scss';
+
+@import './utils/reset.scss';
+@import './utils/vareable';
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: $fontColor;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width: 500px;
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.blocked {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+@import './common/common.scss';
