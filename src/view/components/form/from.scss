@@ -90,6 +90,15 @@
                 &:focus {
                     outline: none;
                 }
+
+                @media (max-width: 700px) {
+                    padding-left: calc(10px + ((100vw - 320px) * (1/340) * 30));
+                }
+
+                @media (max-width: 360px) {
+                    padding-left: 10px;
+
+                }
             }
         }
 
