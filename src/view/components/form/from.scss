@@ -26,6 +26,14 @@
             border-left: 30px solid #E1DEBB;
             border-bottom: 55px solid transparent;
             z-index: 1;
+
+            @media (max-width: 700px) {
+                border-left: calc((100vw - 320px) * (1/340) * 30) solid #E1DEBB;
+            }
+
+            @media (max-width: 360px) {
+                border-left: 0 solid #E1DEBB;
+            }
         }
 
         &::after {
@@ -37,6 +45,16 @@
             border-right: 30px solid #E1DEBB;
             border-top: 55px solid transparent;
             z-index: 1;
+
+            @media (max-width: 700px) {
+                left: calc((100vw - 320px) * (1/340) * (-30));
+                border-right: calc((100vw - 320px) * (1/340) * 30) solid #E1DEBB;
+            }
+
+            @media (max-width: 360px) {
+                left: 0;
+                border-right: 0 solid #E1DEBB;
+            }
         }
 
         &__field-wrap {
@@ -50,6 +68,16 @@
             background-repeat: no-repeat;
             background-size: 700px;
             z-index: 2;
+
+            @media (max-width: 700px) {
+                width: calc(100% + ((100vw - 320px) * (1/340) * 56));
+                clip-path: polygon(calc((100vw - 320px) * (1/340) * 30) 0, 100% 0%, calc(100% - ((100vw - 320px) * (1/340) * 30)) 100%, 0% 100%);
+            }
+
+            @media (max-width: 360px) {
+                width: 100%;
+                clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            }
 
             &__field {
                 width: 100%;
@@ -75,6 +103,14 @@
         align-items: center;
         background: #E1DEBB;
 
+        @media (max-width: 700px) {
+            width: calc(40% - ((100vw - 320px) * (1/340) * 30));
+        }
+
+        @media (max-width: 360px) {
+            width: 40%;
+        }
+
         &:before {
             content: '';
             position: absolute;
@@ -84,6 +120,14 @@
             border-left: 30px solid #E1DEBB;
             border-bottom: 55px solid transparent;
             z-index: 1;
+
+            @media (max-width: 700px) {
+                border-left: calc((100vw - 320px) * (1/340) * 30) solid #E1DEBB;
+            }
+
+            @media (max-width: 360px) {
+                border-left: 0 solid #E1DEBB;
+            }
         }
 
         &::after {
@@ -95,6 +139,16 @@
             border-right: 30px solid #E1DEBB;
             border-top: 55px solid transparent;
             z-index: 1;
+
+            @media (max-width: 700px) {
+                left: calc((100vw - 320px) * (1/340) * (-30));
+                border-right: calc((100vw - 320px) * (1/340) * 30) solid #E1DEBB;
+            }
+
+            @media (max-width: 360px) {
+                left: 0;
+                border-right: 0 solid #E1DEBB;
+            }
         }
 
         &__button {
@@ -114,6 +168,18 @@
 
             &:hover {
                 background: #e40505;
+            }
+
+            @media (max-width: 700px) {
+                width: calc(100% + ((100vw - 320px) * (1/340) * 56));
+                clip-path: polygon(calc((100vw - 320px) * (1/340) * 30) 0, 100% 0%, calc(100% - ((100vw - 320px) * (1/340) * 30)) 100%, 0% 100%);
+                transform: translateX(calc(0px - ((100vw - 320px) * (1/340) * 30)));
+            }
+
+            @media (max-width: 360px) {
+                width: 100%;
+                clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                transform: translateX(-2px);
             }
         }
     }
