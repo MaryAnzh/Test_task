@@ -33,22 +33,27 @@
             border-top: 55px solid transparent;
         }
 
-        &__field {
+        &__field-wrap {
             width: 60%;
             height: 53px;
+            margin: 1px 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
             padding: 8px;
             border: none;
             outline: none;
-            background: black; //#DADAD8;
+            background: #DADAD8;
 
             &:before {
                 content: '';
                 position: absolute;
-                left: 60%;
+                left: 100%;
+                top: 0;
                 width: 0;
                 height: 0;
-                border-left: 30px solid black;
+                border-left: 30px solid #DADAD8;
                 border-bottom: 53px solid transparent;
             }
 
@@ -56,19 +61,32 @@
                 content: '';
                 position: absolute;
                 left: -30px;
+                top: 0;
                 width: 0;
                 height: 0;
-                border-right: 30px solid black; //#E1DEBB;
+                border-right: 30px solid #E1DEBB;
                 border-top: 53px solid transparent;
+                z-index: 2;
             }
 
-            &:focus {
+            &__field {
+                width: 100%;
+                height: 53px;
+                border: none;
                 outline: none;
+                background: none;
+
+                &:focus {
+                    outline: none;
+                }
+
             }
+
+
         }
 
         &__button {
-            width: calc(40% - (30px *2));
+            width: calc(40% - 30px - 6px);
             height: 53px;
             margin: 1px 2px;
             position: relative;
@@ -101,33 +119,5 @@
                 border-top: 53px solid transparent;
             }
         }
-    }
-
-    .test {
-        margin-top: 100px;
-        position: relative;
-        width: 50px;
-        height: 30px;
-        background: red;
-    }
-
-    .test:before {
-        content: '';
-        position: absolute;
-        left: 50px;
-        width: 0;
-        height: 0;
-        border-left: 20px solid red;
-        border-bottom: 30px solid transparent;
-    }
-
-    .test::after {
-        content: '';
-        position: absolute;
-        left: -20px;
-        width: 0;
-        height: 0;
-        border-right: 20px solid red;
-        border-top: 30px solid transparent;
     }
 }

@@ -6,7 +6,8 @@ type Atr = {
 export class FormComponent {
     form = this.createElement('form', 'form', null);
     formElemtWrap = this.createElement('div', 'form__elem-wrap', null);
-    input = this.createElement('input', 'form__elem-wrap__field', [{ name: 'type', value: 'text' }, { name: 'required', value: 'true' }, { name: 'placeholder', value: 'Выш номер,,,' }]);
+    inputWrap = this.createElement('div', 'form__elem-wrap__field-wrap', null);
+    input = this.createElement('input', 'form__elem-wrap__field-wrap__field', [{ name: 'type', value: 'text' }, { name: 'required', value: 'true' }, { name: 'placeholder', value: 'Выш номер,,,' }]);
     submitButton = this.createElement('button', 'form__elem-wrap__button', [{ name: 'type', value: 'submit' }]);
 
     constructor() {
@@ -24,9 +25,9 @@ export class FormComponent {
 
     createForm(): void {
         this.submitButton.textContent = 'Заказать';
-        const test = this.createElement('div', 'test', null);
-        this.formElemtWrap.append(this.input, this.submitButton);
-        this.form.append(this.formElemtWrap, test);
+        this.inputWrap.append(this.input);
+        this.formElemtWrap.append(this.inputWrap, this.submitButton);
+        this.form.append(this.formElemtWrap);
     }
 
     submit(e: Event): void {
