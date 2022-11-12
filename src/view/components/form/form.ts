@@ -7,7 +7,7 @@ export class FormComponent {
     form = this.createElement('form', 'form', null);
     formElemtWrap = this.createElement('div', 'form__elem-wrap', null);
     inputWrap = this.createElement('div', 'form__elem-wrap__field-wrap', null);
-    input = this.createElement('input', 'form__elem-wrap__field-wrap__field', [{ name: 'type', value: 'text' }, { name: 'required', value: 'true' }, { name: 'placeholder', value: 'Выш номер,,,' }]);
+    input = this.createElement('input', 'form__elem-wrap__field-wrap__field', [{ name: 'type', value: 'text' }, { name: 'required', value: 'true' }, { name: 'placeholder', value: 'Вaш номер...' }]);
     submitButton = this.createElement('button', 'form__elem-wrap__button', [{ name: 'type', value: 'submit' }]);
 
     constructor() {
