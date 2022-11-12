@@ -1,13 +1,10 @@
 .form {
-    max-width: 700px;
     width: 100%;
-    padding: 30px 10px;
-    background-color: #121212;
+    padding: 40px;
+    background: #121212;
 
     &__elem-wrap {
-        max-width: 620px;
-        width: 100px;
-        margin-left: 30px;
+        width: 100%;
         position: relative;
         height: 55px;
         display: flex;
@@ -17,7 +14,7 @@
         &:before {
             content: '';
             position: absolute;
-            left: 620px;
+            left: 100%;
             width: 0;
             height: 0;
             border-left: 30px solid #E1DEBB;
@@ -82,8 +79,6 @@
                 }
 
             }
-
-
         }
 
         &__button {
