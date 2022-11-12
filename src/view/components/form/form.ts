@@ -5,10 +5,11 @@ type Atr = {
 
 export class FormComponent {
     form = this.createElement('form', 'form', null);
-    formElemtWrap = this.createElement('div', 'form__elem-wrap', null);
-    inputWrap = this.createElement('div', 'form__elem-wrap__field-wrap', null);
-    input = this.createElement('input', 'form__elem-wrap__field-wrap__field', [{ name: 'type', value: 'text' }, { name: 'required', value: 'true' }, { name: 'placeholder', value: 'Вaш номер...' }]);
-    submitButton = this.createElement('button', 'form__elem-wrap__button', [{ name: 'type', value: 'submit' }]);
+    inputBorder = this.createElement('div', 'form__input-border', null);
+    inputWrap = this.createElement('div', 'form__input-border__field-wrap', null);
+    input = this.createElement('input', 'form__input-border__field-wrap__field', [{ name: 'type', value: 'text' }, { name: 'required', value: 'true' }, { name: 'placeholder', value: 'Вaш номер...' }]);
+    submitButtonBorder = this.createElement('div', 'form__button-wrap', null);
+    submitButton = this.createElement('button', 'form__button-wrap__button', [{ name: 'type', value: 'submit' }]);
 
     constructor() {
         this.createForm();
@@ -26,8 +27,10 @@ export class FormComponent {
     createForm(): void {
         this.submitButton.textContent = 'Заказать';
         this.inputWrap.append(this.input);
-        this.formElemtWrap.append(this.inputWrap, this.submitButton);
-        this.form.append(this.formElemtWrap);
+        this.inputBorder.append(this.inputWrap);
+        this.submitButtonBorder.append(this.submitButton);
+        this.form.append(this.inputBorder, this.submitButtonBorder);
+
     }
 
     submit(e: Event): void {
