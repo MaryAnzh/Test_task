@@ -1,7 +1,10 @@
 .form {
     width: 100%;
     padding: 40px;
-    background: #121212;
+    background-image: url('../bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &__elem-wrap {
         width: 100%;
@@ -10,6 +13,7 @@
         display: flex;
         justify-content: space-between;
         background: #E1DEBB;
+        opacity: 0.8;
 
         &:before {
             content: '';
@@ -92,6 +96,7 @@
             border: none;
             outline: none;
             cursor: pointer;
+            opacity: 1;
 
             &:before {
                 content: '';
