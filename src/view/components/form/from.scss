@@ -28,11 +28,13 @@
             border-bottom: 55px solid transparent;
             z-index: 1;
 
+
+            //вариант плавного перехода 700px -> 500px
             @media (max-width: 700px) {
-                border-left: calc((100vw - 320px) * (1/340) * 30) solid #E1DEBB;
+                border-left: calc((100vw - 500px) * (1/(700 - 500)) * 30) solid #E1DEBB;
             }
 
-            @media (max-width: 360px) {
+            @media (max-width: 500px) {
                 border-left: 0 solid #E1DEBB;
             }
         }
@@ -48,11 +50,11 @@
             z-index: 1;
 
             @media (max-width: 700px) {
-                left: calc((100vw - 320px) * (1/340) * (-30));
-                border-right: calc((100vw - 320px) * (1/340) * 30) solid #E1DEBB;
+                left: calc((100vw - 500px) * (1/(700 - 500)) * (-30));
+                border-right: calc((100vw - 500px) * (1/(700 - 500)) * 30) solid #E1DEBB;
             }
 
-            @media (max-width: 360px) {
+            @media (max-width: 500px) {
                 left: 0;
                 border-right: 0 solid #E1DEBB;
             }
@@ -71,11 +73,11 @@
             z-index: 2;
 
             @media (max-width: 700px) {
-                width: calc(100% + ((100vw - 320px) * (1/340) * 56));
-                clip-path: polygon(calc((100vw - 320px) * (1/340) * 30) 0, 100% 0%, calc(100% - ((100vw - 320px) * (1/340) * 30)) 100%, 0% 100%);
+                width: calc(100% + ((100vw - 500px) * (1/(700 - 500)) * 56));
+                clip-path: polygon(calc((100vw - 500px) * (1/(700 - 500)) * 30) 0, 100% 0%, calc(100% - ((100vw - 500px) * (1/(700 - 500)) * 30)) 100%, 0% 100%);
             }
 
-            @media (max-width: 360px) {
+            @media (max-width: 500px) {
                 width: 100%;
                 clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
             }
@@ -93,10 +95,10 @@
                 }
 
                 @media (max-width: 700px) {
-                    padding-left: calc(10px + ((100vw - 320px) * (1/340) * 30));
+                    padding-left: calc(10px + ((100vw - 500px) * (1/(700 - 500)) * 30));
                 }
 
-                @media (max-width: 360px) {
+                @media (max-width: 500px) {
                     padding-left: 10px;
 
                 }
@@ -114,10 +116,10 @@
         background: #E1DEBB;
 
         @media (max-width: 700px) {
-            width: calc(40% - ((100vw - 320px) * (1/340) * 30));
+            width: calc(40% - ((100vw - 500px) * (1/(700 - 500)) * 30));
         }
 
-        @media (max-width: 360px) {
+        @media (max-width: 500px) {
             width: 40%;
         }
 
@@ -132,10 +134,10 @@
             z-index: 1;
 
             @media (max-width: 700px) {
-                border-left: calc((100vw - 320px) * (1/340) * 30) solid #E1DEBB;
+                border-left: calc((100vw - 500px) * (1/(700 - 500)) * 30) solid #E1DEBB;
             }
 
-            @media (max-width: 360px) {
+            @media (max-width: 500px) {
                 border-left: 0 solid #E1DEBB;
             }
         }
@@ -151,11 +153,11 @@
             z-index: 1;
 
             @media (max-width: 700px) {
-                left: calc((100vw - 320px) * (1/340) * (-30));
-                border-right: calc((100vw - 320px) * (1/340) * 30) solid #E1DEBB;
+                left: calc((100vw - 500px) * (1/(700 - 500)) * (-30));
+                border-right: calc((100vw - 500px) * (1/(700 - 500)) * 30) solid #E1DEBB;
             }
 
-            @media (max-width: 360px) {
+            @media (max-width: 500px) {
                 left: 0;
                 border-right: 0 solid #E1DEBB;
             }
@@ -181,12 +183,12 @@
             }
 
             @media (max-width: 700px) {
-                width: calc(100% + ((100vw - 320px) * (1/340) * 56));
-                clip-path: polygon(calc((100vw - 320px) * (1/340) * 30) 0, 100% 0%, calc(100% - ((100vw - 320px) * (1/340) * 30)) 100%, 0% 100%);
-                transform: translateX(calc(0px - ((100vw - 320px) * (1/340) * 30)));
+                width: calc(100% + ((100vw - 500px) * (1/(700 - 500)) * 56));
+                clip-path: polygon(calc((100vw - 500px) * (1/(700 - 500)) * 30) 0, 100% 0%, calc(100% - ((100vw - 500px) * (1/(700 - 500)) * 30)) 100%, 0% 100%);
+                transform: translateX(calc(0px - ((100vw - 500px) * (1/(700 - 500)) * 30)));
             }
 
-            @media (max-width: 360px) {
+            @media (max-width: 500px) {
                 width: 100%;
                 clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
                 transform: translateX(-2px);
