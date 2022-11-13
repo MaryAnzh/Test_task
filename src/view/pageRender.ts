@@ -13,7 +13,7 @@ export class PageRender {
         }
         this.body.append(this.wrapper);
         this.wrapper.classList.add('wrapper');
-        this.wrapper.append(this.formComponent.form);
+        this.wrapper.append(this.formComponent.form, this.formComponent.weather);
 
     }
 }
